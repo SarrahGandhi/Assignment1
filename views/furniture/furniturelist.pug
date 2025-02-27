@@ -1,0 +1,16 @@
+extends ../common/layout
+
+block layout-content
+  .container
+    h2#products-title Furniture List
+    ul#products-list
+      each furniture in furnitures
+        li.product-item
+          .product-info
+            h2.product-name #{furniture.name}
+            p.product-description #{furniture.description}
+            p.product-price Price: #{furniture.price}
+          form.product-delete-form(action="/furniture/deletefurniture/submit" method="POST")
+            input(type="hidden" name="id" value=furniture._id)
+            button#delete-btn(type="submit") Delete
+    a#add-product-btn(href="/furniture/addfurniture") Add Furniture

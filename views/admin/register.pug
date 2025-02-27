@@ -1,0 +1,10 @@
+extends ../common/layout
+block layout-content 
+  h2 Register
+  form(action="/admin/register", method="post")
+    label.form-label(for = "username") Username
+    input.form-control(type="text", name="username", id="username", required)
+    label.form-label(for = "password") Password
+    input.form-control(type="password", name="pass", id="password", required)
+    button.btn.btn-primary(type="submit") Register
+    p Already have an account? <a href="/admin/login">Login</a>

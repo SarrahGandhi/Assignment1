@@ -1,0 +1,11 @@
+extends ../common/layout
+
+block layout-content
+  h2 Login
+  form(action="/admin/login", method="post")
+    label.form-label(for="username") Username
+    input.form-control(type="text", name="user", id="username", required)
+    label.form-label(for="password") Password
+    input.form-control(type="password", name="pass", id="password", required)
+    button.btn.btn-primary(type="submit") Login
+    p Don't have an account? <a href="/admin/register">Register</a>

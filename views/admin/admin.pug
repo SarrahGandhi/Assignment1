@@ -1,0 +1,15 @@
+extends ../common/layout
+
+block layout-content
+  h2 Welcome, #{username}!
+
+  .categories
+    .category-box
+      a(href="/products/list")
+        img(src="/images/dining.webp", alt="Bestsellers")
+        h3 Bestsellers
+
+    .category-box
+      a(href="/furniture/furniturelist")
+        img(src="/images/modernsofa.jpg", alt="Furniture")
+        h3 Furniture

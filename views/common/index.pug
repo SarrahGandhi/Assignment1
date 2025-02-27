@@ -1,0 +1,47 @@
+extends layout 
+block layout-content 
+    div#layout-content
+        //- Image Source: https://www.realsimple.com/thmb/kRRAaK6XhZIqL_GFIxfZzHTHx7o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/furniture-styles-GettyImages-1467984982-512fed4077b646eabbc187619554d517.jpg
+        img(src="images/landingposter.jpg", alt="landingposter")
+        #floater 
+            p New Arrivals
+            h1 Discover Our New Collection 
+            p We have a new collection of products that are sure to change your life.
+            button.shop-now: a(href="/") Shop Now
+
+block range
+    div#range
+        h2 Browse The Range
+        p Best Sellers 
+        #list 
+            ul
+                li
+                    //- https://assets.wfcdn.com/im/62488874/resize-h800-w800%5Ecompr-r85/2678/267823513/Rahn+Dining+Table.jpg
+                    img(src="images/dining.webp", alt="product1")
+
+                    h3 Dining
+                li 
+                    //- Image source: https://www.bhg.com/thmb/HtvvlBpBSpfFBv_pj4L5TqEZZ2U=/1335x0/filters:no_upscale():strip_icc()/103248739-975b8520d15043afb7d8181972e0388b.jpg
+                    img(src="images/living.jpeg", alt="product2")
+                    h3 Living 
+                li
+                    //- Image Source: https://www.bhg.com/thmb/hG7_GX5I0I-8i-ZgvCOCosObvE8=/1244x0/filters:no_upscale():strip_icc()/bedroom-wooden-accent-wall-9KdgK5zqKcz9ukcu6xy1Hx-c1217ee14b1b43e0ae82ec2046743af5.jpg
+                    img(src="images/bedroom.jpg", alt="product3")
+                    h3 Bedroom
+//- block productrange 
+//-     div#productrange
+//-         h2 Our Products
+//-             #productlist 
+//-                 ul
+//-                     li
+//-                         each product in products
+//-                             .product-item
+//-                                 .product-image
+//-                                     img(src=product.image, alt=product.name)
+//-                                 .product-info
+//-                                     h3.product-name #{product.name}
+//-                                     p.product-description #{product.description}
+//-                                     p.product-price.font-weight-bold.text-success Price: #{product.price}
+                                
+
+

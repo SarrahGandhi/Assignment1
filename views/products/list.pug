@@ -1,0 +1,16 @@
+extends ../common/layout
+
+block layout-content
+  .container
+    h2#products-title Best Sellers
+    ul#products-list
+      each product in products
+        li.product-item
+          .product-info
+            h2.product-name #{product.name}
+            p.product-description #{product.description}
+            p.product-price Price: #{product.price}
+          form.product-delete-form(action="/products/delete/submit", method="POST")
+            input(type="hidden", name="id", value=product._id)
+            button#delete-btn(type="submit") Delete
+    a#add-product-btn(href="/products/add") Add Product

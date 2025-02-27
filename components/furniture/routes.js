@@ -10,6 +10,6 @@ const {
 router.get("/furniturelist", showFurniture);
 router.get("/addfurniture", showaddFurniture);
 router.post("/addfurniture/submit", addFurniture);
-router.get("/deletefurniture", deleteFurniture);
+router.post("/deletefurniture/:id", deleteFurniture);
 router.get("/api/furniturelist", showApiFurniture);
 module.exports = router;
